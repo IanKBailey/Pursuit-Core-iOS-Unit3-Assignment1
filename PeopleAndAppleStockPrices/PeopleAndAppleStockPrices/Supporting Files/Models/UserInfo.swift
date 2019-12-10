@@ -8,31 +8,40 @@
 
 import Foundation
 
-class UserInfoData: codable {
+class UserInfoData: Decodable {
     let results: [User]
 }
 
-class User: codable {
+class User: Decodable {
     let name: Name
     let location: Location
     let email: String
     let phone: String
 }
 
-class Name: Codable {
+class Name: Decodable {
     let first: String
     let last: String
 }
 
-class Location: Codable {
+class Location: Decodable {
     let city: String
 }
 
-extension UserInfo {
-    static func getUsers
+extension UserInfoData {
+    static func getUsers(data: Data) -> [User] {
+        var users = [User]()
+        do {
+            let usersData = try JSONDecoder().decode(UserInfoData.self, from: data)
+            users = usersData.results
+        } catch {
+            fatalError("\(error)")
+        }
+        return users
+    
+    
+}
 }
 
 
-    
-        
         

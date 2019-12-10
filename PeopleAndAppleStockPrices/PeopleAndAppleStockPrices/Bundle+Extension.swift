@@ -10,7 +10,7 @@ import Foundation
 
 
 extension Bundle {
-func getJSON(url: String, ext: String) -> Data {
+ static func getJSON(url: String, ext: String) -> Data {
     
     var data: Data
     
