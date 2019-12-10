@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5639B962239EDA5C008ADB18 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5639B961239EDA5C008ADB18 /* UserInfo.swift */; };
 		5639B964239EE155008ADB18 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5639B963239EE155008ADB18 /* Bundle+Extension.swift */; };
+		5639B96723A02390008ADB18 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5639B96623A02390008ADB18 /* UserDetailViewController.swift */; };
+		5639B96923A02DA1008ADB18 /* StockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5639B96823A02DA1008ADB18 /* StockInfo.swift */; };
+		5639B96C23A03663008ADB18 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5639B96B23A03663008ADB18 /* StockViewController.swift */; };
+		5639B96E23A03675008ADB18 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5639B96D23A03675008ADB18 /* StockDetailViewController.swift */; };
 		577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E5BEB21BA8BA10083EB97 /* AppDelegate.swift */; };
 		577E5BEE21BA8BA10083EB97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E5BED21BA8BA10083EB97 /* ViewController.swift */; };
 		577E5BF121BA8BA10083EB97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BEF21BA8BA10083EB97 /* Main.storyboard */; };
@@ -21,6 +25,10 @@
 /* Begin PBXFileReference section */
 		5639B961239EDA5C008ADB18 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		5639B963239EE155008ADB18 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		5639B96623A02390008ADB18 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		5639B96823A02DA1008ADB18 /* StockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInfo.swift; sourceTree = "<group>"; };
+		5639B96B23A03663008ADB18 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
+		5639B96D23A03675008ADB18 /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
 		577E5BE821BA8BA10083EB97 /* PeopleAndAppleStockPrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleAndAppleStockPrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577E5BEB21BA8BA10083EB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577E5BED21BA8BA10083EB97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,8 +55,20 @@
 			isa = PBXGroup;
 			children = (
 				5639B961239EDA5C008ADB18 /* UserInfo.swift */,
+				5639B96823A02DA1008ADB18 /* StockInfo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5639B96A23A03609008ADB18 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				577E5BED21BA8BA10083EB97 /* ViewController.swift */,
+				5639B96623A02390008ADB18 /* UserDetailViewController.swift */,
+				5639B96B23A03663008ADB18 /* StockViewController.swift */,
+				5639B96D23A03675008ADB18 /* StockDetailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		577E5BDF21BA8BA10083EB97 = {
@@ -70,7 +90,7 @@
 		577E5BEA21BA8BA10083EB97 /* PeopleAndAppleStockPrices */ = {
 			isa = PBXGroup;
 			children = (
-				577E5BED21BA8BA10083EB97 /* ViewController.swift */,
+				5639B96A23A03609008ADB18 /* ViewControllers */,
 				577E5BEF21BA8BA10083EB97 /* Main.storyboard */,
 				5639B963239EE155008ADB18 /* Bundle+Extension.swift */,
 				577E5BFD21BA8BE20083EB97 /* Supporting Files */,
@@ -173,7 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5639B96E23A03675008ADB18 /* StockDetailViewController.swift in Sources */,
+				5639B96923A02DA1008ADB18 /* StockInfo.swift in Sources */,
+				5639B96C23A03663008ADB18 /* StockViewController.swift in Sources */,
 				577E5BEE21BA8BA10083EB97 /* ViewController.swift in Sources */,
+				5639B96723A02390008ADB18 /* UserDetailViewController.swift in Sources */,
 				5639B962239EDA5C008ADB18 /* UserInfo.swift in Sources */,
 				577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */,
 				5639B964239EE155008ADB18 /* Bundle+Extension.swift in Sources */,
@@ -324,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PeopleAndAppleStockPrices/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PeopleAndAppleStockPrices/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

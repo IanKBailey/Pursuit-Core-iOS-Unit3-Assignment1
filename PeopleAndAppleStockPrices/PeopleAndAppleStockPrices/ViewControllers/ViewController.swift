@@ -23,7 +23,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.dataSource = self
-    userInfo = UserInfoData.getUsers(data: data).sorted(by: { $0.name.first < $1.name.first})
+    userInfo = UserInfoData.getUsers(data: data)
+
     
   
 
