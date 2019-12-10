@@ -26,9 +26,17 @@ class StockViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         stockInfo = Stock.getStock(data: data)
+        
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow,
+            let stockDetailViewController = segue.destination as? StockDetailViewController else { return }
+        
+        let stockDetail = stockInfo[indexPath.row]
+        stockDetailViewController.stocks = stockDetail
+        
+    }
     
 
 }
@@ -42,6 +50,7 @@ extension StockViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stockCell", for: indexPath)
         let stock = stockInfo[indexPath.row]
         cell.textLabel?.text = "\(stock.date)"
+        cell.detailTextLabel?.text = "\(stock.open)"
         return cell
     }
     

@@ -22,6 +22,10 @@ class User: Decodable {
 class Name: Decodable {
     let first: String
     let last: String
+    
+    public var fullName: String {
+        return first.capitalized + " " + last.capitalized
+    }
 }
 
 class Location: Decodable {
